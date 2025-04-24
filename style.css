@@ -138,8 +138,96 @@ nav ul li a {
         height: 15px;
     }
 }
-/* Second slide */
-.second-page {
+
+/* Social Media */
+/* --- Carousel Styles --- */
+/* .carousel-container {
+    position: relative;
+    width: 80%; 
+    margin: 20px auto; 
+    overflow: hidden; 
+}
+
+.carousel-slide {
+    display: none;
+    position: relative;
+}
+
+.carousel-slide img {
+    width: 100%;
+    display: block;
+    height: auto; 
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.carousel-caption h3 {
+    margin-top: 0;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+.carousel-slide.active {
+    display: block; 
+} */
+
+/* --- Fixed Social Media Icons --- */
+.social-media-fixed {
+    position: fixed;
+    bottom: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    display: flex;
+    flex-direction: column; /* Stack icons vertically */
+    gap: 10px; /* Spacing between icons */
+    z-index: 101; /* Ensure it's above other content */
+}
+
+.social-media-fixed a {
+    display: block;
+}
+
+.social-media-fixed img {
+    width: 30px; /* Adjust icon size */
+    height: auto;
+    opacity: 0.7; /* Optional: Transparency */
+    transition: opacity 0.3s ease-in-out;
+}
+
+.social-media-fixed a:hover img {
+    opacity: 1;
+}
+
+
+/* Second slide  Carousel*/
+/* .second-page {
     width: 100vw;
     height: 100vh; 
     overflow: hidden; 
@@ -159,7 +247,7 @@ nav ul li a {
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
-}
+} */
 
 .left-text, .right-text {
     position: absolute; 
@@ -178,7 +266,7 @@ nav ul li a {
     text-align: left;
 }
 
-.right-text {
+ .right-text {
     right: 5%; 
     text-align: right;
 }
@@ -186,12 +274,12 @@ nav ul li a {
 .left-text h2 {
     font-size: 2.5em;
     margin-bottom: 10px;
-}
+} 
 
-.right-text p {
+ .right-text p {
     font-size: 1.2em;
     line-height: 1.6;
-}
+} 
 
 /* CHAIRMAN 3RD */
 .chairman-message-section {
