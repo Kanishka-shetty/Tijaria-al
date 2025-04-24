@@ -1,10 +1,17 @@
 /* Global responsiveness */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
 body {
     font-family: sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
+    padding-top: 140px; /* Space for the fixed header */
     line-height: 1.5;
     background-color: #f4f4f4;
     color: #333;
@@ -21,7 +28,7 @@ header {
     top: 0; /* Stick it to the top of the viewport */
     left: 0; /* Stick it to the left edge of the viewport */
     width: 100%; /* Make it span the entire width */
-    z-index: 100; /* Ensure it stays on top of other content */
+    z-index: 999; /* Ensure it stays on top of other content */
 }
 .container{
     display: flex;
@@ -141,63 +148,111 @@ nav ul li a {
 
 /* Social Media */
 /* --- Carousel Styles --- */
-/* .carousel-container {
+
+  /* Make sure body and html take full height */
+
+  
+  /* Carousel image styling */
+  .carousel {
+    margin-top: 100px; /* Just for testing */
+    z-index: 1;
+  }
+  
+  .carousel-item img {
+    z-index: 1;
     position: relative;
-    width: 80%; 
-    margin: 20px auto; 
-    overflow: hidden; 
-}
-
-.carousel-slide {
-    display: none;
-    position: relative;
-}
-
-.carousel-slide img {
-    width: 100%;
-    display: block;
-    height: auto; 
-}
-
-.carousel-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
-
-.carousel-caption h3 {
-    margin-top: 0;
-}
-
-.carousel-prev, .carousel-next {
+  }
+  
+  
+  /* Default caption styling (for desktop) */
+  .carousel-caption {
+    z-index: 10 !important;
     position: absolute;
     top: 50%;
+    left: 10%;
     transform: translateY(-50%);
-    font-size: 2em;
-    padding: 10px;
-    background: none;
-    border: none;
-    color: black;
-    cursor: pointer;
-    user-select: none;
+    text-align: left;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 15px;
+    border-radius: 5px;
+    width: fit-content;
+    height: fit-content;
+    max-width: 40%;
+  }
+  
+  .carousel-item {
+    position: relative; /* Needed so captions absolutely position inside */
+  }
+
+  .carousel-caption h5 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.2em;
+    line-height: 1.2;
+  }
+  
+
+  /* Tablet View (between 768px and 991px) */
+  @media (max-width: 991px) {
+    .carousel-caption {
+      font-size: 0.9em;
+      left: 5%;
+      max-width: 60%;
+      padding: 8px 12px;
+    }
+  
+    .carousel-caption h5 {
+      font-size: 1.8em;
+    }
+  
+    .carousel-caption p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Mobile View (less than 768px) */
+/* Styles for Phones (smaller than 768px width) */
+/* Update for mobile view */
+@media (max-width: 768px) {
+    .carousel-item {
+        min-height: 300px; /* Ensures the carousel has height */
+    }
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /* Revert back from 'contain' */
+    }
+
+    .carousel-caption {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: 15px;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        text-align: center;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.5em;
+        margin-bottom: 5px;
+    }
+
+    .carousel-caption p {
+        font-size: 1.1em;
+        line-height: 1.2;
+    }
 }
 
-.carousel-prev {
-    left: 10px;
-}
 
-.carousel-next {
-    right: 10px;
-}
-
-.carousel-slide.active {
-    display: block; 
-} */
+  
 
 /* --- Fixed Social Media Icons --- */
 .social-media-fixed {
